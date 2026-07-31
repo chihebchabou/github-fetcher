@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.header {
+  @apply max-w-6xl mx-auto flex flex-col items-center my-10;
+
+  h1 {
+    @apply text-center text-gray-500 font-semibold text-3xl m-4;
+  }
+
+  p {
+    @apply text-lg max-w-xl mx-4 text-gray-400 text-center font-light leading-9;
+  }
+}
