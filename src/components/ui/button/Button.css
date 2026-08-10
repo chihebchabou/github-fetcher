@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+.button {
+  @apply text-white flex items-center justify-center rounded-md transition duration-300 disabled:opacity-55 disabled:cursor-not-allowed;
+}
+
+/* Colors */
+.button--default {
+  @apply bg-gray-800 not-disabled:hover:bg-gray-600 not-disabled:active:bg-gray-900;
+}
+
+.button--primary {
+  @apply bg-indigo-800 not-disabled:hover:bg-indigo-600 not-disabled:active:bg-indigo-900;
+}
+
+.button--danger {
+  @apply bg-red-800 not-disabled:hover:bg-red-600 not-disabled:active:bg-red-900;
+}
+
+.button--warning {
+  @apply bg-orange-800 not-disabled:hover:bg-orange-600 not-disabled:active:bg-orange-900;
+}
+
+/* Sizes */
+.button--small {
+  @apply text-sm p-1;
+}
+
+.button--base {
+  @apply text-base p-2;
+}
+
+.button--large {
+  @apply text-lg p-3;
+}
