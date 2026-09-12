@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.search {
+  @apply max-w-3xl mx-auto w-full flex flex-col sm:flex-row sm:items-center p-6 gap-4;
+
+  input {
+    @apply border border-gray-800 rounded-md p-2 sm:flex-1;
+  }
+}
