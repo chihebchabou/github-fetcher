@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+.user-card {
+  @apply flex flex-col items-center text-gray-100 rounded-lg p-4 border border-gray-800 transition duration-300;
+
+  img {
+    @apply rounded-full w-2/3 mb-5;
+  }
+
+  h2 {
+    @apply text-xl font-bold text-gray-100 mb-5;
+  }
+  button {
+    @apply w-full  cursor-pointer;
+  }
+}
