@@ -2,7 +2,7 @@ import Button from "../ui/button/Button";
 import "./UserCard.css";
 
 const UserCard = ({ user, onChangeView }) => {
-  const handleOnClick = () => onChangeView("profile");
+  const handleOnClick = () => onChangeView("profile", user);
   return (
     <div className="user-card">
       <img src={user.avatar_url} alt={`Avatar de ${user.login}`} />

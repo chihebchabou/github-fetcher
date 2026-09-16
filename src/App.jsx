@@ -5,14 +5,20 @@ import { useState } from "react";
 
 const App = () => {
   const [view, setView] = useState("main");
+  const [selectedUser, setSelectedUser] = useState(null);
 
-  const handleOnChangeView = (v) => setView(v);
+  const handleOnChangeView = (v, user) => {
+    if (v === "profile") setSelectedUser(user);
+    setView(v);
+  };
 
   return (
     <>
       {view === "main" && <MainView onChangeView={handleOnChangeView} />}
       {view === "search" && <SearchView onChangeView={handleOnChangeView} />}
-      {view === "profile" && <ProfileView />}
+      {view === "profile" && (
+        <ProfileView user={selectedUser} onChangeView={handleOnChangeView} />
+      )}
     </>
   );
 };

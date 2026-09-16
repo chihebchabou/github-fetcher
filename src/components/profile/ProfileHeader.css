@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.profile-header {
+  @apply max-w-6xl mx-auto px-6 pt-6 flex flex-col items-center;
+
+  .profile-header__back {
+    @apply self-start flex items-center gap-2 text-gray-400 hover:text-gray-100 mb-6 cursor-pointer bg-transparent border-none text-sm transition duration-300;
+  }
+
+  img {
+    @apply w-40 h-40 rounded-full border-4 border-gray-800 mb-6;
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-gray-100 text-center;
+  }
+
+  .profile-header__login {
+    @apply text-xl text-gray-400 font-light mb-4;
+  }
+
+  .profile-header__bio {
+    @apply text-gray-400 text-center max-w-xl leading-7 mb-6;
+  }
+
+  .profile-header__meta {
+    @apply flex flex-wrap justify-center items-center gap-4 text-gray-400 mb-8;
+
+    span,
+    a {
+      @apply flex items-center gap-2;
+    }
+
+    a {
+      @apply text-indigo-400 hover:text-indigo-300 transition duration-300 break-all;
+    }
+  }
+
+  > a.button {
+    @apply no-underline;
+  }
+}

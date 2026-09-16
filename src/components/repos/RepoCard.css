@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.repo-card {
+  @apply flex flex-col gap-3 border border-gray-800 rounded-lg p-4 transition duration-300 hover:border-gray-600;
+
+  .repo-card__name {
+    @apply font-bold text-lg truncate;
+
+    a {
+      @apply text-indigo-400 hover:text-indigo-300 transition duration-300;
+    }
+  }
+
+  .repo-card__description {
+    @apply text-gray-400 text-sm leading-6 line-clamp-2;
+  }
+
+  .repo-card__meta {
+    @apply flex items-center gap-4 mt-auto text-gray-400 text-sm;
+
+    .repo-card__language {
+      @apply px-2 py-0.5 rounded-full bg-gray-800 text-gray-300;
+    }
+
+    .repo-card__count {
+      @apply flex items-center gap-1;
+    }
+  }
+}

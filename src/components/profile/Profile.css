@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.profile {
+  @apply grid sm:grid-cols-2 md:grid-cols-3 gap-4 p-6 max-w-5xl mx-auto text-gray-100 border border-gray-800 rounded-md mt-20;
+
+  .profile__stat {
+    @apply flex flex-col items-center gap-1 p-4 bg-gray-900 border border-gray-800 rounded-md;
+  }
+
+  .profile__stat-value {
+    @apply text-3xl font-bold;
+  }
+
+  .profile__stat-label {
+    @apply text-gray-400;
+  }
+}
