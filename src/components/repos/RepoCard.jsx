@@ -12,6 +12,7 @@ const RepoCard = ({ repo }) => {
       {repo.description && (
         <p className="repo-card__description">{repo.description}</p>
       )}
+
       <div className="repo-card__meta">
         {repo.language && (
           <span className="repo-card__language">{repo.language}</span>
