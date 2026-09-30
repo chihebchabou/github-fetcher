@@ -6,13 +6,15 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import "./ProfileHeader.css";
+import { useViews } from "../../context/views/ViewsContext";
 
 const formatUrl = (url) =>
   url && !/^https?:\/\//i.test(url) ? `https://${url}` : url;
 
-const ProfileHeader = ({ user, onChangeView }) => {
+const ProfileHeader = ({ user }) => {
   const blogUrl = formatUrl(user.blog);
-  const handleOnClick = () => onChangeView("search");
+  const { handleOnChangeView } = useViews();
+  const handleOnClick = () => handleOnChangeView("search");
   return (
     <section className="profile-header">
       <button

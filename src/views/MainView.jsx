@@ -2,7 +2,7 @@ import Features from "../components/features/Features";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 
-const MainView = ({ onChangeView }) => {
+const MainView = () => {
   return (
     <>
       {/* Header Section */}
@@ -10,7 +10,7 @@ const MainView = ({ onChangeView }) => {
       {/* Features Section */}
       <Features />
       {/* Footer Section */}
-      <Footer onChangeView={onChangeView} />
+      <Footer />
     </>
   );
 };

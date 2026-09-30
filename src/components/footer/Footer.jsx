@@ -1,9 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import "./Footer.css";
 import Button from "../ui/button/Button";
+import { useViews } from "../../context/views/ViewsContext";
 
-const Footer = ({ onChangeView }) => {
-  const handleOnClick = () => onChangeView("search");
+const Footer = () => {
+  const { handleOnChangeView } = useViews();
+  const handleOnClick = () => handleOnChangeView("search");
+
   return (
     <footer className="footer">
       <h2>Prêt à explorer ?</h2>

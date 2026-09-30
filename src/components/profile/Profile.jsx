@@ -1,7 +1,7 @@
 import "./Profile.css";
 import ProfileHeader from "./ProfileHeader";
 
-const Profile = ({ user, totalStars, onChangeView }) => {
+const Profile = ({ user, totalStars }) => {
   const stats = [
     { label: "Abonnés", value: user.followers },
     { label: "Abonnements", value: user.following },
@@ -10,7 +10,7 @@ const Profile = ({ user, totalStars, onChangeView }) => {
   ];
   return (
     <>
-      <ProfileHeader user={user} onChangeView={onChangeView} />
+      <ProfileHeader user={user} />
 
       <section className="profile">
         {stats.map((stat) => (

@@ -1,15 +1,23 @@
 import "./Search.css";
 import Button from "../ui/button/Button";
+import { useViews } from "../../context/views/ViewsContext";
+import { useUsers } from "../../context/users/UsersContext";
 
-const Search = ({ value, onChange, onChangeView }) => {
-  const handleOnClick = () => onChangeView("main");
+const Search = () => {
+  const { query, handleOnChange, handleClearUsers } = useUsers();
+  const { handleOnChangeView } = useViews();
+  const handleOnClick = () => {
+    handleOnChangeView("main");
+    handleClearUsers();
+  };
+
   return (
     <section className="search">
       <input
         type="search"
         placeholder="ex:mojombo"
-        value={value}
-        onChange={onChange}
+        value={query}
+        onChange={handleOnChange}
       />
       <Button variant="danger" size="base" onClick={handleOnClick}>
         annuler

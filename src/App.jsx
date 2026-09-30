@@ -1,24 +1,16 @@
 import MainView from "./views/MainView";
 import SearchView from "./views/SearchView";
 import ProfileView from "./views/ProfileView";
-import { useState } from "react";
+import { useViews } from "./context/views/ViewsContext";
 
 const App = () => {
-  const [view, setView] = useState("main");
-  const [selectedUser, setSelectedUser] = useState(null);
-
-  const handleOnChangeView = (v, user) => {
-    if (v === "profile") setSelectedUser(user);
-    setView(v);
-  };
+  const { view } = useViews();
 
   return (
     <>
-      {view === "main" && <MainView onChangeView={handleOnChangeView} />}
-      {view === "search" && <SearchView onChangeView={handleOnChangeView} />}
-      {view === "profile" && (
-        <ProfileView user={selectedUser} onChangeView={handleOnChangeView} />
-      )}
+      {view === "main" && <MainView />}
+      {view === "search" && <SearchView />}
+      {view === "profile" && <ProfileView />}
     </>
   );
 };
